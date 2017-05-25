@@ -1,0 +1,114 @@
+﻿---[supa_de_legume]---
+---[descriere]----
+['Curățați și tăiați cubulețe cartofii și restul de legume.
+ Într-o oală mare căliți ceapa în puțin unt, adăugați două 
+ treimi din cartofi și din morcovi, dar și restul legumelor, 
+ mai puțin ciupercile, și turnați deasupra supa de legume sau de pui. 
+ Lăsați la fiert până când sunt toate legumele bine fierte. Blenduiți-le 
+ cu blenderul de mână (sau treceți-le printr-o strecurătoare fină, 
+ sfârâmându-le cu o lingură de lemn). Fierbeți restul cartofilor și 
+ al morcovilor în apă cu sare. Căliți ciupercile în puțin unt și 
+ adăugați-le, alături de cartofii și morcovii fierți, peste supa cremă. 
+ Adăugați și smântâna în supă și bateți-o bine, puneți sare și piper după 
+ gust, lăsați să fiarbă un minut și adăugați verdeața']
+---[imagine:cale_relativa_imagine]---
+---[ingrediente]---
+(cartofi)
+(ceapa)
+(unt)
+(morcovi)
+(ciuperci)
+(apa)
+(sare)
+(piper)
+(smantana)
+(verdeata)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[peste]---
+---[descriere]----
+['Pastravul se spala bine cu apa rece, dupa se da prin faina si se pune 
+in uleiul incins si se rumeneste pe ambele parti, dupa preferinte.']
+---[imagine:cale_relativa_imagine]---
+---[ingrediente]---
+(peste)
+(faina)
+(ulei)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[piure_de_cartofi]---
+---[descriere]----
+['Curatam cartofii de coaja, ii taiem cuburi sau felii si ii punem la 
+fiert in apa fierbinte foarte putin sarata. Apa va fi de un deget 
+deasupra cartofilor. Ii fierbem la foc mediu in jur de 20-30 minute, 
+pana intra usor furculita in ei. Putem pune in oala in care fierb 
+putin unt.']
+---[imagine:cale_relativa_imagine]---
+---[ingrediente]---
+(cartofi)
+(sare)
+(apa)
+(unt)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[salata_de_fructe]---
+---[descriere]----
+['Ananasul se taie cubuleţe. Rodia se desface. Portocalele se desface în 
+felii şi se de taie cubuleţe. Căpşunile se taie şi ele de dimensiunea 
+celorlalte fructe deja tăiate. Se procedează la fel cu kiwi, grapefruitul, 
+mango si marul. Se desprind de pe ciorchine boabele de coacăze şi se 
+alătură celorlalte fructe. Salata de fructe se serveşte alături de frişcă 
+şi decorată cu frunze de mentă.']
+---[imagine:cale_relativa_imagine]---
+---[ingrediente]---
+(ananas)
+(rodii)
+(portocale)
+(capsuni)
+(kiwi)
+(grapefruit)
+(mango)
+(mar)
+(coacaze)
+(frisca)
+(menta)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[friptura_de_pui]---
+---[descriere]----
+['Etapa 1:
+Aripioarele se spala bine se perpelesc putin si apoi se sterg cu un servet.
+Toate condimentele se amesteca intr-un castron se adauga putin sos de soia 
+si putin ulei si se pun aripioarele care se ung bine.
+Etapa 2:
+Se lasa asa peste noapte sa se patrunda condimentele bine in carne.
+Etapa 3:
+Se pune gratarul la foc potrivit in partea de jos a gratarului se pune 
+o cana cu apa si apoi aripioarele, se pune capacul si in 15-20 min este 
+gata. 
+']
+---[imagine:cale_relativa_imagine]---
+---[ingrediente]---
+(pui)
+(sare)
+(piper)
+(soia)
+(ulei)
+(apa)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[branza]---
+---[descriere]----
+['Brânza este un produs lactat obținut prin coagularea laptelui 
+anumitor animale, mai des vaci, dar și capre, iac, oi și bivoli. 
+']
+---[imagine:cale_relativa_imagine]---
+---[ingrediente]---
+(lapte)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
