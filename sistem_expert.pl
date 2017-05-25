@@ -355,8 +355,8 @@ retractall(scop(_)),retractall(interogabil(_,_,_)),
 retractall(regula(_,_,_)),
 see(F),incarca_reguli,seen,incarca_d,!.
 
-%incarca_d(F) :-
-%see(F),incarca_descrieri,seen,!.
+incarca_d(F) :-
+see(F),incarca_descrieri,seen,!.
 
 incarca_reguli :-
 repeat,citeste_propozitie(L),
