@@ -344,6 +344,7 @@ incarca :-
 write('Introduceti numele fisierului care doriti sa fie incarcat: '),nl, write('|:'),read(F),
 file_exists(F),!,incarca(F).
 incarca:-write('Nume incorect de fisier! '),nl,fail.
+
 incarca_d :-
 write('Introduceti numele fisierului cu descrierile: '),nl, write('|:'),read(F),
 file_exists(F),!,incarca_d(F).
@@ -356,18 +357,20 @@ retractall(regula(_,_,_)),
 see(F),incarca_reguli,seen,incarca_d,!.
 
 incarca_d(F) :-
+retractall(ingredient(_)),retractall(descriere(_,_,_,_)),
 see(F),incarca_descrieri,seen,!.
 
 incarca_reguli :-
 repeat,citeste_propozitie(L),
 proceseaza(L),L == [end_of_file],nl.
 
-%incarca_descrieri :-
-%repeat,citeste_propozitie(L),
-%proceseaza(L),L == [end_of_file],nl.
+incarca_descrieri :-
+repeat,citeste_propozitie(L),
+proceseaza(L),L == [end_of_file],nl.
 
-proceseaza([end_of_file]):-!.
+proceseaza([end_of_file]):- !.
 proceseaza(L) :-
+write(L),
 trad(R,L,[]),assertz(R), !.
 trad(scop(X)) --> [scop,'(',X,')']. %cu --> baga in baza de cunostinte scopul
 trad(scop(X)) --> [scop,X].
@@ -399,7 +402,7 @@ propoz(av(Atr,Val)) --> [Atr,'=',Val].
 propoz(av(Atr,da)) --> ['-','>',Atr,'=',da].
 
 citeste_linie([Cuv|Lista_cuv]):-  %citeste o linie
-get_code(Car),					  %ia primul caracter ca sa decida ce tip e citit (int, string etc.)
+get_code(Car),				      %ia primul caracter ca sa decida ce tip e citit (int, string etc.)
 citeste_cuvant(Car, Cuv, Car1),   %citeste primul cuvant
 rest_cuvinte_linie(Car1, Lista_cuv).  
       
@@ -417,6 +420,7 @@ rest_cuvinte_propozitie(Car1, Lista_cuv).
      
 rest_cuvinte_propozitie(-1, []):-!.    
 rest_cuvinte_propozitie(Car,[]) :-Car==46, !.
+rest_cuvinte_propozitie(Car,[]) :-Car==94, !.
 rest_cuvinte_propozitie(Car,[Cuv1|Lista_cuv]) :-
 citeste_cuvant(Car,Cuv1,Car1),      
 rest_cuvinte_propozitie(Car1,Lista_cuv).
