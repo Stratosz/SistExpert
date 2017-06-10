@@ -1,17 +1,17 @@
 ﻿---[supa_de_legume]---
 ---[descriere]----
-['Curățați și tăiați cubulețe cartofii și restul de legume.
- Într-o oală mare căliți ceapa în puțin unt, adăugați două 
- treimi din cartofi și din morcovi, dar și restul legumelor, 
- mai puțin ciupercile, și turnați deasupra supa de legume sau de pui. 
- Lăsați la fiert până când sunt toate legumele bine fierte. Blenduiți-le 
- cu blenderul de mână (sau treceți-le printr-o strecurătoare fină, 
- sfârâmându-le cu o lingură de lemn). Fierbeți restul cartofilor și 
- al morcovilor în apă cu sare. Căliți ciupercile în puțin unt și 
- adăugați-le, alături de cartofii și morcovii fierți, peste supa cremă. 
- Adăugați și smântâna în supă și bateți-o bine, puneți sare și piper după 
- gust, lăsați să fiarbă un minut și adăugați verdeața']
----[imagine:cale_relativa_imagine]---
+['Curatati si taiati cubulete cartofii si restul de legume.
+ Intr-o oala mare caliti ceapa in putin unt, adaugati doua 
+ treimi din cartofi si din morcovi, dar si restul legumelor, 
+ mai putin ciupercile, si turnati deasupra supa de legume sau de pui. 
+ Lasati la fiert pana cand sunt toate legumele bine fierte. Blenduiti-le 
+ cu blenderul de mana (sau treceti-le printr-o strecuratoare fina, 
+ sfaramandu-le cu o lingura de lemn). Fierbeti restul cartofilor si 
+ al morcovilor in apa cu sare. Caliti ciupercile in putin unt si 
+ adaugati-le, alaturi de cartofii si morcovii fierti, peste supa crema. 
+ Adaugați si smantana in supa si bateti-o bine, puneti sare si piper dupa 
+ gust, lasati sa fiarba un minut si adăugati verdeata']
+---[imagine:supa de legume.jpg]---
 ---[ingrediente]---
 (cartofi)
 (ceapa)
@@ -30,7 +30,7 @@
 ---[descriere]----
 ['Pastravul se spala bine cu apa rece, dupa se da prin faina si se pune 
 in uleiul incins si se rumeneste pe ambele parti, dupa preferinte.']
----[imagine:cale_relativa_imagine]---
+---[imagine:peste.JPG]---
 ---[ingrediente]---
 (peste)
 (faina)
@@ -45,7 +45,7 @@ fiert in apa fierbinte foarte putin sarata. Apa va fi de un deget
 deasupra cartofilor. Ii fierbem la foc mediu in jur de 20-30 minute, 
 pana intra usor furculita in ei. Putem pune in oala in care fierb 
 putin unt.']
----[imagine:cale_relativa_imagine]---
+---[imagine:piure de cartofi.jpg]---
 ---[ingrediente]---
 (cartofi)
 (sare)
@@ -56,13 +56,13 @@ putin unt.']
 
 ---[salata_de_fructe]---
 ---[descriere]----
-['Ananasul se taie cubuleţe. Rodia se desface. Portocalele se desface în 
-felii şi se de taie cubuleţe. Căpşunile se taie şi ele de dimensiunea 
-celorlalte fructe deja tăiate. Se procedează la fel cu kiwi, grapefruitul, 
-mango si marul. Se desprind de pe ciorchine boabele de coacăze şi se 
-alătură celorlalte fructe. Salata de fructe se serveşte alături de frişcă 
-şi decorată cu frunze de mentă.']
----[imagine:cale_relativa_imagine]---
+['Ananasul se taie cubulete. Rodia se desface. Portocalele se desface in 
+felii si se de taie cubulete. Căpsunile se taie si ele de dimensiunea 
+celorlalte fructe deja taiate. Se procedeaza la fel cu kiwi, grapefruitul, 
+mango si marul. Se desprind de pe ciorchine boabele de coacaze si se 
+alatura celorlalte fructe. Salata de fructe se serveste alaturi de frisca 
+si decorata cu frunze de menta.']
+---[imagine:salata de fructe.jpg]---
 ---[ingrediente]---
 (ananas)
 (rodii)
@@ -89,9 +89,8 @@ Se lasa asa peste noapte sa se patrunda condimentele bine in carne.
 Etapa 3:
 Se pune gratarul la foc potrivit in partea de jos a gratarului se pune 
 o cana cu apa si apoi aripioarele, se pune capacul si in 15-20 min este 
-gata. 
-']
----[imagine:cale_relativa_imagine]---
+gata.']
+---[imagine:friptura de pui.jpg]---
 ---[ingrediente]---
 (pui)
 (sare)
@@ -104,11 +103,310 @@ gata.
 
 ---[branza]---
 ---[descriere]----
-['Brânza este un produs lactat obținut prin coagularea laptelui 
-anumitor animale, mai des vaci, dar și capre, iac, oi și bivoli. 
-']
----[imagine:cale_relativa_imagine]---
+['Branza este un produs lactat obtinut prin coagularea laptelui 
+anumitor animale, mai des vaci, dar si capre, iac, oi si bivoli.']
+---[imagine:branza.jpg]---
 ---[ingrediente]---
 (lapte)
 
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[suc_de_fructe]---
+---[descriere]----
+['Pentru intarirea sistemului imunitar fa-ti un suc delicios dintr-un mar, doua pere si
+o portocala. Fiind dulce si delicios, acest suc poate fi baut pe post de desert natural,
+insa trebuie sa astepti o ora dupa masa pentru efecte maxime. Acest suc iti va face
+plinul de vitamina C, va stimula sistemul imunitar si te va revigora.']
+---[imagine:suc de fructe.jpg]---
+---[ingrediente]---
+(mar)
+(pere)
+(portocala)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[paste_cu_sos]---
+---[descriere]----
+['Incalzesti uleiul de masline la foc mediu, adaugi in tigaie ceapa, usturoiul si le calesti
+pana se inmoaie, aproximativ 3 minute. Adaugi rosiile si busuiocul, torni vinul si
+prepari sosul la foc mediu-mic, in timp ce il fierbi la foc mic, acoperit, aproximativ 30
+de minute. Torni sosul intr-un procesor de alimente (blender) si il mixezi pana cand
+capata consistenta unui piure.
+Pui sosul de rosii in aceeasi cratita, il reincalzesti putin si adaugi sare si piper, dupa
+gust. Intre timp, fierbi pastele conform indicatiilor de pe pachet si le scurgi de apa
+cand sunt gata. Adaugi pastele in cratita cu sosul de rosii. Cand le servesti, peste
+fiecare portie de paste, razi putin parmezan si presari ceapa verde tocata.']
+---[imagine:paste cu sos.jpg]---
+---[ingrediente]---
+(ulei)
+(ceapa)
+(usturoi)
+(rosii)
+(busuioc)
+(vin)
+(sare)
+(piper)
+(parmezan)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[mamaliga]---
+---[descriere]----
+['1. Se pun 500 mililitri de apa la fiert, intr-un ceaun sau o oala, la foc mare, pentru a
+scurta procesul. In momentul cand apa ajunge la punctul de fierbere, puteti incepe sa
+adaugați malaiul in ploaie, amestecand constant, pentru a evita formarea
+cocoloaselor.
+2. Dupa ce terminati de adăugat malaiului, focul se da la mic, iar continutul se lasa la
+fiert. Pentru a nu se lipi, se amesteca in mod constant cu ajutorul unei linguri de
+lemn.
+3. In momentul cand observati ca marginile mamaligii au inceput sa se adune spre
+centru sau ati gustat si este gatita, inchideti focul si rasturnati-o pe o farfurie intinsa
+sau pe un fund de lemn, cum faceau bunicile noastre.']
+---[imagine:mamaliga.jpg]---
+---[ingrediente]---
+(apa)
+(malai)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[ceai]---
+---[descriere]----
+['- fierbeti apa;
+- preincalziti ceasca pentru a evita racirea prea rapida a apei. Acest lucru poate fi
+facut prin turnarea unei cantitati mici de apa fierbinte in ea dupa care se acopera
+ceasca si se lasa pana devine calda. Se arunca apa. Va recomandam vase de
+ceramica sau portelan.
+- puneti ceaiul (plantele) intr-o sita adanca sau direct in ceasca; incercati cu o
+lingurita cu varf pentru fiecare ceasca de ceai sau utilizati instructiunile
+producatorului.
+- adaugati apa fierbinte peste plante.']
+---[imagine:ceai.jpg]---
+---[ingrediente]---
+(apa)
+(plante)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[friptura_de_curcan]---
+---[descriere]----
+['Prima data amestecam untul cu rozmarinul tocat marunt, coaja de lamaie, putin piper
+proaspat macinat si un praf de sare.
+Incercam sa bagam crema de unt sub pielita de pe pulpe, apoi o lipim pe cat posibil de
+carne.
+Punem pulpele in tava, turnam vinul si uleiul cat sa ne ajunga la jumatatea pulpelor.
+Aruncam printre acestea, 2 catei de usturoi, boabe de piper, felii de ardei verde si
+ceapa taiata in 6 sau 8, iar pe pulpe presaram ace de rozmarin, sare și piper.
+Acoperim tava cu o folie de staniol si o dam la cuptorul preincalzit la 200 grade C timp de o
+ora.
+Trebuie sa avem grija ca la 20-25 de minute sa stropim pulpele cu sosul din tava.
+Dupa acest interval adaugam ciupercile si morcovii taiati fasii subtiri si intoarcem
+pulpele.
+Apoi le mai lasam acoperite pana incepe sa se desprinda carnea de curcan de pe os.
+Cand carnea incepe sa se desprinda de pe os, luam folia si lasam in cuptor pana se
+rumenesc frumos pe ambele parti.']
+---[imagine:friptura de curcan.jpg]---
+---[ingrediente]---
+(unt)
+(rozmarin)
+(lamaie)
+(piper)
+(sare)
+(pulpe)
+(vin)
+(ulei)
+(usturoi)
+(ardei)
+(ceapa)
+(ciuperci)
+(morcovi)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[friptura_de_vita]---
+---[descriere]----
+['Curatati morcovii (ideal ar fi să fie cat mai mici si mai subtiri) ai usturoiul. 
+Puneti carnea cu tot cu marinata in vasul pentru copt, neaparat cu capac, asezati
+si legumele si presarati deasupra muschiuletului, sarea grunjoasa, care se va amesteca
+printre verdeata si va forma o crusta delicioasa.
+Lasati timp de o ora si zece minute, dar indepartati capacul in ultimele 15 minute.']
+---[imagine:friptura de vita.jpg]---
+---[ingrediente]---
+(morcovi)
+(usturoi)
+(carne)
+(legume)
+(sare)
+(verdeata)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[prajitura]---
+---[descriere]----
+['1. Pentru blat, untul, zaharul, mierea si ouale se mixeaza.
+2. Se pun apoi faina, praful de copt si esenta de cafea. Se amesteca 2 minute, se toarna in
+tava usor unsa si se coace 30 de minute. Se lasa la racit, se taie si se imbiba cele doua
+blaturi cu sirop facut din fierberea apei cu zaharul.
+3. Pentru crema, se pun pe foc cafeaua si mierea, cu romul. Ouale se freaca cu zaharul si,
+dupa ce se obtine o crema alba, se adauga untul si jumatate din mierea cu cafea. Se
+amesteca si se pune si restul amestecului de miere.
+4. Crema se asaza intre cele doua blaturi insiropate, se da la rece pentru 4 ore si se
+serveste cu ciocolata rasa deasupra si boabe de cafea.']
+---[imagine:prajitura.jpg]---
+---[ingrediente]---
+(unut)
+(zahar)
+(miere)
+(oua)
+(faina)
+(praf_de_copt)
+(esenta_de_cafea)
+(apa)
+(cafea)
+(rom)
+(ciocolata)
+(boabe_de_cafea)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[lapte_cu_cereale]---
+---[descriere]----
+['Se fierbe laptele. Daca este lapte fiert doar se incalzeste.
+Intr-un castronel punem cerealele. Apoi peste ele punem laptele si amestecam.']
+---[imagine:cereale cu lapte.jpg]---
+---[ingrediente]---
+(lapte)
+(cereale)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[budinca_cu_mere]---
+---[descriere]----
+['Curata merele, apoi da-le prin razatoare si amesteca-le cu miezul de nuca macinat. Separa
+albusurile de galbenusuri si mixeaza albusurile cu zahar, pana obtii o spuma omogena.
+Amesteca si galbenusurile cu compozitia de mere, apoi incorporeaza bezeaua din albusuri.
+Toarna compozitia obtinuta intr-o tava termorezistenta unsa cu unt si pesmet.
+Pune budinca la cuptor, la foc mare pentru circa 15 minute, apoi la foc mediu pana se
+rumeneste frumos.']
+---[imagine:budinca cu mere.jpg]---
+---[ingrediente]---
+(mere)
+(nuca)
+(oua)
+(zahar)
+(unt)
+(pesment)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[ciorba_de_vita]---
+---[descriere]----
+['Carnea se spala si se taie bucati potrivite. Se pune la fiert in apa cu putina sare, se
+spumeaza daca este nevoie. La jumatatea fierberii se adauga ceapa curatata si
+tocata marunt, ardeii curatati si taiati cubulete mici si morcovul curatat si dat prin
+razatoarea mare.
+Cand sunt aproape fierte se adauga sucul de rosii. Daca aveti rosii proaspete, le puteti
+decoji, toca marunt si se trag in tigaie in putin ulei. Se adauga si taiteii si se continua
+fierberea.
+La urma cand sunt toate fierte se acreste ciorba cu bors de putina sau bors magic, se
+sareaza, se pipereaza se ia de pe foc si se adauga verdeata tocata marunt.
+Se serveste cu smantana si cu ardeiul iute.']
+---[imagine:ciorba de vita.jpg]---
+---[ingrediente]---
+(carne)
+(apa)
+(sare)
+(ceapa)
+(ardei)
+(morcov)
+(suc_de_rosii)
+(ulei)
+(taitei)
+(bors)
+(piper)
+(verdeata)
+(smantana)
+(ardei_iute)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[inghetata]---
+---[descriere]----
+['Intr-un bol se mixeaza mascarponele cu frisca lichida si zaharul pudra pana se obtine o
+consistenta mai groasa. Se adauga apoi piersicile date prin blender. Se amestea apoi se
+toarna intr-o cutie. Se da la congelator pentru minim 3 ore, in acest timp amestecandu-se de
+cateva ori pentru a nu se forma ace de gheata. Zmeura se pune la congelator, apoi se
+scoate si se pune intr-un blender impreuna cu iaurtul si mierea de albine. Se blenduiesc bine
+pana se obtine o consistenta cremoasa. Se pune intr-o cutie si se da la congelator pentru
+minim 3 ore, in acest timp amestecandu-se de cateva ori pentru a nu se forma ace de
+gheata. Se scoate inghetata de la congelator inainte cu o jumatate de ora de a fi servita. Cu
+ajutorul lingurii speciale se formeaza globuri de inghetata care se aseaza intr-o cupa, alaturi
+de piscoturi si zmeura proaspata.']
+---[imagine:inghetata.jpg]---
+---[ingrediente]---
+(mascarpone)
+(frisca)
+(zahar)
+(piersici)
+(zmeura)
+(iaurt)
+(miere)
+(piscoturi)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[musaca]---
+---[descriere]----
+['Se curata cartofii si se taie rondele. Ceapa se toaca marunt si se pune la calit in ulei.
+Dupa ce prinde putina culoare se adauga si carnea tocata. Se lasa aproximativ 15
+minute, iar spre final se adauga rosiile pasate, usturoiul maruntit, patrunjelul, sarea si
+piperul. 
+Intr-o tava se aseaza un rand de cartofi, apoi amestecul de carne, peste care se
+aseaza ultimul rand de cartofi. Pe deasupra se rade cascaval, iar apoi se toarna
+pasta de tomate diluata cu apa. Se baga la cuptor.']
+---[imagine:musaca.jpg]---
+---[ingrediente]---
+(cartofi)
+(ceapa)
+(ulei)
+(carne_tocata)
+(rosii)
+(usturoi)
+(patrunjel)
+(sare)
+(piper)
+(cascaval)
+(pasta_de_tomate)
+(apa)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[paine_prajita]---
+---[descriere]----
+['Se taie painea felii. Laptele se pune intr-o farfurie impreuna cu cele 2 linguri de zahar si se
+amesteca pana cand se dizolva zaharul. Ouale se bat.
+In tigaie se pune o lingura de ulei sau putin unt.
+Painea se inmoaie in lapte, apoi se trece prin ou, iar dupa se pune in tigaie. Tineti felia 3
+minute pe fiecare parte, sau pana se face aurie.
+Se serveste cu zahar pudra sau cu zahar tos.']
+---[imagine:paine prajita.jpg]---
+---[ingrediente]---
+(paine)
+(lapte)
+(zahar)
+(oua)
+(ulei)
+(unt)
+(zahar)
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+---[miere]---
+---[descriere]----
+['Intr-un borcan de 800 ml, se zdrobesc 500g boabe de catina, peste care se adauga
+500g de miere, dupa care 3 saptamani se lasa la macerat in frigider. Se consuma
+zilnic cate o lingurita din acest preparat si astfel organismul este fortificat in
+perioadele cand raceala si gripa incearca sa atace.']
+---[imagine:miere.jpg]---
+---[ingrediente]---
+(boabe_de_catina)
+(miere)
