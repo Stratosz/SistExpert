@@ -11,7 +11,7 @@
  adaugati-le, alaturi de cartofii si morcovii fierti, peste supa crema. 
  Adaugați si smantana in supa si bateti-o bine, puneti sare si piper dupa 
  gust, lasati sa fiarba un minut si adăugati verdeata']
----[imagine:supa de legume.jpg]---
+---[imagine:'supa_de_legume.jpg']---
 ---[ingrediente]---
 (cartofi)
 (ceapa)
@@ -30,7 +30,7 @@
 ---[descriere]----
 ['Pastravul se spala bine cu apa rece, dupa se da prin faina si se pune 
 in uleiul incins si se rumeneste pe ambele parti, dupa preferinte.']
----[imagine:peste.JPG]---
+---[imagine:'peste.JPG']---
 ---[ingrediente]---
 (peste)
 (faina)
@@ -45,7 +45,7 @@ fiert in apa fierbinte foarte putin sarata. Apa va fi de un deget
 deasupra cartofilor. Ii fierbem la foc mediu in jur de 20-30 minute, 
 pana intra usor furculita in ei. Putem pune in oala in care fierb 
 putin unt.']
----[imagine:piure de cartofi.jpg]---
+---[imagine:'piure_de_cartofi.jpg']---
 ---[ingrediente]---
 (cartofi)
 (sare)
@@ -62,7 +62,7 @@ celorlalte fructe deja taiate. Se procedeaza la fel cu kiwi, grapefruitul,
 mango si marul. Se desprind de pe ciorchine boabele de coacaze si se 
 alatura celorlalte fructe. Salata de fructe se serveste alaturi de frisca 
 si decorata cu frunze de menta.']
----[imagine:salata de fructe.jpg]---
+---[imagine:'salata_de_fructe.jpg']---
 ---[ingrediente]---
 (ananas)
 (rodii)
@@ -90,7 +90,7 @@ Etapa 3:
 Se pune gratarul la foc potrivit in partea de jos a gratarului se pune 
 o cana cu apa si apoi aripioarele, se pune capacul si in 15-20 min este 
 gata.']
----[imagine:friptura de pui.jpg]---
+---[imagine:'friptura_de_pui.jpg']---
 ---[ingrediente]---
 (pui)
 (sare)
@@ -117,7 +117,7 @@ anumitor animale, mai des vaci, dar si capre, iac, oi si bivoli.']
 o portocala. Fiind dulce si delicios, acest suc poate fi baut pe post de desert natural,
 insa trebuie sa astepti o ora dupa masa pentru efecte maxime. Acest suc iti va face
 plinul de vitamina C, va stimula sistemul imunitar si te va revigora.']
----[imagine:suc de fructe.jpg]---
+---[imagine:'suc_de_fructe.jpg']---
 ---[ingrediente]---
 (mar)
 (pere)
@@ -136,7 +136,7 @@ Pui sosul de rosii in aceeasi cratita, il reincalzesti putin si adaugi sare si p
 gust. Intre timp, fierbi pastele conform indicatiilor de pe pachet si le scurgi de apa
 cand sunt gata. Adaugi pastele in cratita cu sosul de rosii. Cand le servesti, peste
 fiecare portie de paste, razi putin parmezan si presari ceapa verde tocata.']
----[imagine:paste cu sos.jpg]---
+---[imagine:'paste_cu_sos.jpg']---
 ---[ingrediente]---
 (ulei)
 (ceapa)
@@ -162,7 +162,7 @@ lemn.
 3. In momentul cand observati ca marginile mamaligii au inceput sa se adune spre
 centru sau ati gustat si este gatita, inchideti focul si rasturnati-o pe o farfurie intinsa
 sau pe un fund de lemn, cum faceau bunicile noastre.']
----[imagine:mamaliga.jpg]---
+---[imagine:'mamaliga.jpg']---
 ---[ingrediente]---
 (apa)
 (malai)
@@ -180,7 +180,7 @@ ceramica sau portelan.
 lingurita cu varf pentru fiecare ceasca de ceai sau utilizati instructiunile
 producatorului.
 - adaugati apa fierbinte peste plante.']
----[imagine:ceai.jpg]---
+---[imagine:'ceai.jpg']---
 ---[ingrediente]---
 (apa)
 (plante)
@@ -204,7 +204,7 @@ pulpele.
 Apoi le mai lasam acoperite pana incepe sa se desprinda carnea de curcan de pe os.
 Cand carnea incepe sa se desprinda de pe os, luam folia si lasam in cuptor pana se
 rumenesc frumos pe ambele parti.']
----[imagine:friptura de curcan.jpg]---
+---[imagine:'friptura_de_curcan.jpg']---
 ---[ingrediente]---
 (unt)
 (rozmarin)
@@ -229,7 +229,7 @@ Puneti carnea cu tot cu marinata in vasul pentru copt, neaparat cu capac, asezat
 si legumele si presarati deasupra muschiuletului, sarea grunjoasa, care se va amesteca
 printre verdeata si va forma o crusta delicioasa.
 Lasati timp de o ora si zece minute, dar indepartati capacul in ultimele 15 minute.']
----[imagine:friptura de vita.jpg]---
+---[imagine:'friptura_de_vita.jpg']---
 ---[ingrediente]---
 (morcovi)
 (usturoi)
@@ -272,7 +272,7 @@ serveste cu ciocolata rasa deasupra si boabe de cafea.']
 ---[descriere]----
 ['Se fierbe laptele. Daca este lapte fiert doar se incalzeste.
 Intr-un castronel punem cerealele. Apoi peste ele punem laptele si amestecam.']
----[imagine:cereale cu lapte.jpg]---
+---[imagine:'cereale_cu_lapte.jpg']---
 ---[ingrediente]---
 (lapte)
 (cereale)
@@ -287,7 +287,7 @@ Amesteca si galbenusurile cu compozitia de mere, apoi incorporeaza bezeaua din a
 Toarna compozitia obtinuta intr-o tava termorezistenta unsa cu unt si pesmet.
 Pune budinca la cuptor, la foc mare pentru circa 15 minute, apoi la foc mediu pana se
 rumeneste frumos.']
----[imagine:budinca cu mere.jpg]---
+---[imagine:'budinca_cu_mere.jpg']---
 ---[ingrediente]---
 (mere)
 (nuca)
@@ -310,7 +310,7 @@ fierberea.
 La urma cand sunt toate fierte se acreste ciorba cu bors de putina sau bors magic, se
 sareaza, se pipereaza se ia de pe foc si se adauga verdeata tocata marunt.
 Se serveste cu smantana si cu ardeiul iute.']
----[imagine:ciorba de vita.jpg]---
+---[imagine:'ciorba_de_vita.jpg']---
 ---[ingrediente]---
 (carne)
 (apa)
@@ -341,7 +341,7 @@ minim 3 ore, in acest timp amestecandu-se de cateva ori pentru a nu se forma ace
 gheata. Se scoate inghetata de la congelator inainte cu o jumatate de ora de a fi servita. Cu
 ajutorul lingurii speciale se formeaza globuri de inghetata care se aseaza intr-o cupa, alaturi
 de piscoturi si zmeura proaspata.']
----[imagine:inghetata.jpg]---
+---[imagine:'inghetata.jpg']---
 ---[ingrediente]---
 (mascarpone)
 (frisca)
@@ -363,7 +363,7 @@ piperul. 
 Intr-o tava se aseaza un rand de cartofi, apoi amestecul de carne, peste care se
 aseaza ultimul rand de cartofi. Pe deasupra se rade cascaval, iar apoi se toarna
 pasta de tomate diluata cu apa. Se baga la cuptor.']
----[imagine:musaca.jpg]---
+---[imagine:'musaca.jpg']---
 ---[ingrediente]---
 (cartofi)
 (ceapa)
@@ -388,7 +388,7 @@ In tigaie se pune o lingura de ulei sau putin unt.
 Painea se inmoaie in lapte, apoi se trece prin ou, iar dupa se pune in tigaie. Tineti felia 3
 minute pe fiecare parte, sau pana se face aurie.
 Se serveste cu zahar pudra sau cu zahar tos.']
----[imagine:paine prajita.jpg]---
+---[imagine:'paine_prajita.jpg']---
 ---[ingrediente]---
 (paine)
 (lapte)
@@ -406,7 +406,10 @@ Se serveste cu zahar pudra sau cu zahar tos.']
 500g de miere, dupa care 3 saptamani se lasa la macerat in frigider. Se consuma
 zilnic cate o lingurita din acest preparat si astfel organismul este fortificat in
 perioadele cand raceala si gripa incearca sa atace.']
----[imagine:miere.jpg]---
+---[imagine:'miere.jpg']---
 ---[ingrediente]---
 (boabe_de_catina)
 (miere)
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^

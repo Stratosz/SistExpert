@@ -9,7 +9,6 @@
 :-dynamic interogabil/3.
 :-dynamic regula/3.
 :-dynamic intrebare_curenta/3.
-:-dynamic ingredient/1.
 :-dynamic descriere/4.
 
 not(P):-P,!,fail.
@@ -127,6 +126,7 @@ pornire :-
 retractall(interogat(_)),
 retractall(fapt(_,_,_)),
 retractall(intrebare_curenta(_,_,_)),
+retractall(descriere(_,_,_,_)),
 repeat,
 write('Introduceti una din urmatoarele optiuni: '),
 nl,nl,
@@ -357,7 +357,7 @@ retractall(regula(_,_,_)),
 see(F),incarca_reguli,seen,incarca_d,!.
 
 incarca_d(F) :-
-retractall(ingredient(_)),retractall(descriere(_,_,_,_)),
+retractall(descriere(_,_,_,_)),
 see(F),incarca_descrieri,seen,!.
 
 incarca_reguli :-
@@ -376,7 +376,7 @@ trad(scop(X)) --> [scop,X].
 trad(interogabil(Atr,M,P)) -->  %cu --> baga in baza de cunostinte si un fapt de tipul interogabil
 [intrebare,'[',Atr,']'],lista_optiuni(M),afiseaza(Atr,P).
 trad(regula(N,premise(Daca),concluzie(Atunci,F))) --> identificator(N),daca(Daca),atunci(Atunci,F).
-trad(descriere(Atr, Desc, Img, I)) --> atrib(Atr), descr(Desc), imagine(Img), lista_ingred(I).
+trad(descriere(Atr, Desc, Img, ingrediente(I))) --> atrib(Atr), descr(Desc), imagine(Img), lista_ingred(I).
 trad('Eroare la parsare'-L,L,_).
 
 atrib(Atr) --> ['-','-','-','[',Atr,']','-','-','-'].
@@ -384,7 +384,7 @@ descr(Desc) --> ['-','-','-','[',descriere,']','-','-','-','-','[',Desc,']'].
 imagine(Img) --> ['-','-','-','[',imagine,':',Img,']','-','-','-'].
 
 lista_ingred(I) --> ['-','-','-','[',ingrediente,']','-','-','-'], lista_de_ingrediente(I).
-lista_de_ingrediente([El]) --> ['(',El,')'].
+lista_de_ingrediente([El]) --> ['(',El,')','^'].
 lista_de_ingrediente([El|T]) --> ['(',El,')'], lista_de_ingrediente(T).
 
 lista_optiuni(M) --> [optiuni,':'],lista_de_optiuni(M).
@@ -506,7 +506,7 @@ citeste_cuvant(_,Cuvant,Caracter1) :-
 get_code(Caracter),       
 citeste_cuvant(Caracter,Cuvant,Caracter1). 
 
-caracter_cuvant(C):-member(C,[40,41,46,91,93,58,45,62,61]). %daca are caractere pe care nu le poate identifica, sare peste ele
+caracter_cuvant(C):-member(C,[40,41,46,91,93,94,58,45,62,61]). %daca are caractere pe care nu le poate identifica, sare peste ele
 														% toate caracterele neaflanumerice care trebuie sa fie in reguli trebuie adaugate aici
 
 
