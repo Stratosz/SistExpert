@@ -370,14 +370,22 @@ proceseaza(L),L == [end_of_file],nl.
 
 proceseaza([end_of_file]):- !.
 proceseaza(L) :-
-write(L),
 trad(R,L,[]),assertz(R), !.
 trad(scop(X)) --> [scop,'(',X,')']. %cu --> baga in baza de cunostinte scopul
 trad(scop(X)) --> [scop,X].
 trad(interogabil(Atr,M,P)) -->  %cu --> baga in baza de cunostinte si un fapt de tipul interogabil
 [intrebare,'[',Atr,']'],lista_optiuni(M),afiseaza(Atr,P).
 trad(regula(N,premise(Daca),concluzie(Atunci,F))) --> identificator(N),daca(Daca),atunci(Atunci,F).
+trad(descriere(Atr, Desc, Img, I)) --> atrib(Atr), descr(Desc), imagine(Img), lista_ingred(I).
 trad('Eroare la parsare'-L,L,_).
+
+atrib(Atr) --> ['-','-','-','[',Atr,']','-','-','-'].
+descr(Desc) --> ['-','-','-','[',descriere,']','-','-','-','-','[',Desc,']'].
+imagine(Img) --> ['-','-','-','[',imagine,':',Img,']','-','-','-'].
+
+lista_ingred(I) --> ['-','-','-','[',ingrediente,']','-','-','-'], lista_de_ingrediente(I).
+lista_de_ingrediente([El]) --> ['(',El,')'].
+lista_de_ingrediente([El|T]) --> ['(',El,')'], lista_de_ingrediente(T).
 
 lista_optiuni(M) --> [optiuni,':'],lista_de_optiuni(M).
 lista_de_optiuni([Element]) -->  ['-','>',Element].
