@@ -157,22 +157,60 @@ determina(Atr) :-
 realizare_scop(av(Atr,_),_,[scop(Atr)]),!.
 determina(_).
 
+%afiseaza scop original:
+%afiseaza_scop(Atr) :-
+%nl,fapt(av(Atr,Val),FC,_), 
+%FC >= 60,scrie_scop(av(Atr,Val),FC),
+%nl,fail.
+
+%am modificat modul in care functioneaza afisarea scopului: se creeaza o lista de fapte,
+%ce se ordoneaza crescator, si apoi se apeleaza scrie_scop_lista pentru a o afisa in ordine
+%inversa -> ordine descrescatoare
 afiseaza_scop(Atr) :-
-nl,fapt(av(Atr,Val),FC,_),
-FC >= 20,scrie_scop(av(Atr,Val),FC),
+nl,creaza_lista_fapte(Atr,L),
+ordonare_param_fapte(L,Lrez),
+scrie_scop_lista(Lrez),
 nl,fail.
 afiseaza_scop(Atr) :-
 nl,\+ fapt(av(Atr,Val),_,_),
 write('Nu exista solutii pentru raspunsurile date!'),nl,fail.
 afiseaza_scop(_):-nl,nl.
 
-scrie_scop(av(Atr,Val),FC) :-
+%creaza_lista_fapte(+Atr,-L) - creeaza o lista cu toate faptele
+creaza_lista_fapte(Atr,L):- findall(fapt(av(Atr,Val),FC,_),fapt(av(Atr,Val),FC,_),L).
+%sort_lista_fapte(+L,-L1) - sorteaza lista in functie de FC
+sort_lista_fapte(L,L1):-setof(fapt(FC,av(Atr,Val),Hist), member(fapt(av(Atr,Val),FC,Hist),L),L1).    
+%ordonare_param_fapte(+L,-Lrez) - reordoneaza parametrii predicatului (FC si av(...)
+ordonare_param_fapte(L,Lrez):-sort_lista_fapte(L,L1),bagof(fapt(av(Atr,Val),FC,Hist), member(fapt(FC,av(Atr,Val),Hist),L1),Lrez).
+%scrie_scop_lista(+L) - ia lista de fapte sortata si o afiseaza invers (pt afisarea descrescatoare in functie de FC)
+scrie_scop_lista([H|T]):-
+scrie_scop_lista(T), scrie_scop(H).
+scrie_scop_lista([]).
+
+%am modificat scrie scop pentru primi un predicat de tip fapt;
+%am adaugat verificarea FC >= 60 in scriere, deoarece am modificat 
+%modul in care luam toate faptele
+scrie_scop(fapt(av(Atr,Val),FC,_)) :-
+FC >= 60,
 transformare(av(Atr,Val), X),
 scrie_lista(X),tab(2),
 write(' '),
 write('factorul de certitudine este '),
-FC1 is integer(FC),write(FC1).
+FC1 is integer(FC),write(FC1), nl.
 
+%scrie_scop original:
+%scrie_scop(av(Atr,Val),FC) :-
+%transformare(av(Atr,Val), X),
+%scrie_lista(X),tab(2),
+%write(' '),
+%write('factorul de certitudine este '),
+%FC1 is integer(FC),write(FC1).
+
+%prima definitie a predicatului e folosita pentru a nu mai verifica in regulile
+%de care depinde Atr, daca are valoarea potrivita sau nu; pentru un Atr cu nu_conteaza
+%orice valoare e considerata ca fiind adevarata
+realizare_scop(av(Atr,_),FC,Istorie):- 
+fapt(av(Atr, nu_conteaza),FC,_), !.
 realizare_scop(not Scop,Not_FC,Istorie) :-
 realizare_scop(Scop,FC,Istorie),
 Not_FC is - FC, !.
@@ -256,13 +294,14 @@ cum(Scop),
 cum_premise(X).
         
 interogheaza(Atr,Mesaj,[da,nu],Istorie) :- %interogheaza utilizatorul
-!,write(Mesaj),nl,
-de_la_utiliz(X,Istorie,[da,nu]), 
+!,write(Mesaj),nl,write('(da,nu,nu_stiu,nu_conteaza)'),nl,
+de_la_utiliz(X,Istorie,[da,nu,nu_stiu,nu_conteaza]), 
 det_val_fc(X,Val,FC), %determina atributul cu valoarea si FC pentru raspuns
 asserta( fapt(av(Atr,Val),FC,[utiliz]) ). %salveaza la inceput faptul cu atributul si valoarea, FC-ul si istoricul ca fiind de la utilizator
 interogheaza(Atr,Mesaj,Optiuni,Istorie) :-
 write(Mesaj),nl,
-citeste_opt(VLista,Optiuni,Istorie),
+append(Optiuni, [nu_stiu, nu_conteaza], Optiuni1),
+citeste_opt(VLista,Optiuni1,Istorie),
 assert_fapt(Atr,VLista).
 
 
