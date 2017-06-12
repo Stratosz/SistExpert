@@ -127,12 +127,34 @@ retractall(interogat(_)),
 retractall(fapt(_,_,_)),
 retractall(intrebare_curenta(_,_,_)),
 retractall(descriere(_,_,_,_)),
+creaza_folder,
 repeat,
 write('Introduceti una din urmatoarele optiuni: '),
 nl,nl,
 write(' (Incarca Consulta Reinitiaza  Afisare_fapte  Cum   Iesire) '),
 nl,nl,write('|: '),citeste_linie([H|T]),
 executa([H|T]), H == iesire.
+
+%daca exista folderul output_mancare, sterge folderul si fisierul (daca exista) 
+%si recreaza-l; altfel, pur si simplu creeaza directorul output_mancare
+creaza_folder :-
+directory_exists('output_mancare') ->
+sterge_fisier_si_director, make_directory(output_mancare);
+make_directory(output_mancare).
+
+%verifica daca exista fisierul si il sterge, apoi apeleaza sterge_director
+sterge_fisier_si_director :- 
+directory_exists('output_mancare'),
+current_directory(_, output_mancare),
+file_exists('log_atrib_sol.txt') ->
+delete_file('log_atrib_sol.txt'), sterge_director;
+sterge_director.
+
+%revine in folderul radacina al proiectului si sterge directorul output_mancare
+sterge_director :-
+current_directory(CWD, '..'),
+directory_exists('output_mancare'),
+delete_directory(output_mancare).
 
 executa([incarca]) :- 
 incarca,!,nl,
@@ -150,7 +172,10 @@ executa([_|_]) :-
 write('Comanda incorecta! '),nl.
 
 scopuri_princ :-  %determina scopul principal
-scop(Atr),determina(Atr), afiseaza_scop(Atr), afiseaza_detalii(Atr), fail.
+scop(Atr),determina(Atr),
+afiseaza_scop(Atr), afiseaza_detalii(Atr),
+%access_file(log_atrib_sol.txt, append),
+fail.
 scopuri_princ.
 
 determina(Atr) :-
