@@ -150,19 +150,36 @@ executa([_|_]) :-
 write('Comanda incorecta! '),nl.
 
 scopuri_princ :-  %determina scopul principal
-scop(Atr),determina(Atr), afiseaza_scop(Atr), detalii_scop(Atr), fail.
+scop(Atr),determina(Atr), afiseaza_scop(Atr), afiseaza_detalii(Atr), fail.
 scopuri_princ.
 
 determina(Atr) :-
 realizare_scop(av(Atr,_),_,[scop(Atr)]),!.
 determina(_).
 
+%intreaba utilizatorul daca doreste sau nu detalii
+afiseaza_detalii(Atr):-
+repeat,
+write('Detalii (da/nu)?: '),
+nl,nl,write('|: '),citeste_linie([H|T]), 
+!, proces_rasp(Atr, H).
+
+%proceseaza raspunsul pentru intrebarea legata  de detalii
+proces_rasp(Atr, da):-
+detalii_scop(Atr), fail.
+proces_rasp(Atr, nu):-
+fail.
+
 %detalii_scop(+Atr) - primeste un atribut si afiseaza detaliile pentru solutiile existente
 detalii_scop(Atr):-
 creaza_lista_fapte(Atr, L),
-sort_lista_fapte(L, L1),
-ordonare_param_fapte(L1, Lrez),
-scrie_scop_lista_detalii(Lrez).
+ordonare_param_fapte(L, Lrez),
+scrie_scop_lista_detalii(Lrez),
+nl,fail.
+detalii_scop(Atr) :-
+nl,\+ fapt(av(Atr,_),_,_),
+write('Nu exista solutii pentru raspunsurile date!'),nl,fail.
+detalii_scop(_):-nl,nl.
 
 
 %afiseaza scop original:
@@ -211,11 +228,23 @@ write('factorul de certitudine este '),
 FC1 is integer(FC),write(FC1), nl.
 
 %folosit pentru afisarea formatata a solutiilor cu detalii
-scrie_scop_detalii(fapt(av(Atr,_),_,_)) :-
-descriere(Atr, Desc, Img, LIngred),
-nl,write(Atr),nl,
-write('>>>descriere:'), write(Desc), nl,
-write('>>>ingrediente:'), write(LIngred), nl, nl .
+scrie_scop_detalii(fapt(av(Atr,Val),_,_)) :-
+descriere(Val, Desc, Img, LIngred),
+nl,write(Val),nl,
+write('>>>descriere: '), write(Desc), nl,
+write('>>>ingrediente: '), afiseaza_lista_ingred(LIngred), nl, nl .
+
+%afiseaza lista ingrediente
+afiseaza_lista_ingred([H|T]):-
+write(H),
+%daca nu mai exista alte elemente in lista, afiseaza "."
+T == [] ->
+write('.')
+%altfel, afiseaza ", " si apeleaza predicatul cu restul listei
+;write(', '),
+afiseaza_lista_ingred(T).
+afiseaza_lista_ingred([]).
+
 
 %scrie_scop original:
 %scrie_scop(av(Atr,Val),FC) :-
@@ -434,7 +463,7 @@ trad(scop(X)) --> [scop,X].
 trad(interogabil(Atr,M,P)) -->  %cu --> baga in baza de cunostinte si un fapt de tipul interogabil
 [intrebare,'[',Atr,']'],lista_optiuni(M),afiseaza(Atr,P).
 trad(regula(N,premise(Daca),concluzie(Atunci,F))) --> identificator(N),daca(Daca),atunci(Atunci,F).
-trad(descriere(Atr, Desc, Img, ingrediente(I))) --> atrib(Atr), descr(Desc), imagine(Img), lista_ingred(I).
+trad(descriere(Atr, Desc, Img, I)) --> atrib(Atr), descr(Desc), imagine(Img), lista_ingred(I).
 trad('Eroare la parsare'-L,L,_).
 
 atrib(Atr) --> ['-','-','-','[',Atr,']','-','-','-'].
