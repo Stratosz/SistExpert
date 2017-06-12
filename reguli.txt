@@ -1,0 +1,1103 @@
+scop(tipuri_mancare).
+
+regula[1]
+daca: 
+    -> greata=da 
+    -> varsaturi=da
+    -> dureri_abdominale=da
+    -> oboseala=da
+    -> temperatura=temperatura_medie
+atunci:
+   boli=diabet cu fc=90.
+
+regula[2]
+daca:
+    -> greata=da
+    -> varsaturi=da
+    -> dureri_abdominale=da
+    -> temperatura=temperatura_medie
+atunci:
+   boli=de_ficat cu fc=90.
+
+regula[3]
+daca:
+    -> tuse=da
+    -> greata=da
+    -> varsaturi=da
+    -> dureri_abdominale=da
+    -> temperatura=temperatura_mare
+atunci:
+   boli=pancreatice cu fc=90.
+
+regula[4]
+daca:
+    -> dureri_articulatii=da
+    -> temperatura=temperatura_mare
+atunci:
+   boli=guta cu fc=90.
+
+regula[5]
+daca:
+    -> dureri_in_piept=da
+    -> oboseala=da
+    -> tuse=da
+    -> greata=da
+    -> temperatura=temperatura_mica
+atunci:
+   boli=afectiuni_cardiovasculare cu fc=90.
+
+regula[6]
+daca:
+    -> dureri_abdominale=da
+    -> varsaturi=da
+    -> balonari=da
+    -> greata=da
+    -> temperatura=temperatura_medie
+atunci:
+   boli=ulcer cu fc=90.
+
+regula[7]
+daca:
+    -> dureri_abdominale=da
+    -> oboseala=da
+    -> dureri_articulatii=da
+    -> temperatura=temperatura_medie
+atunci:
+   boli=hepatite_cronice cu fc=90.
+
+regula[8]
+daca:
+    -> indigestie=da
+    -> tulburari_digestive=da
+atunci:
+   dureri_abdominale=da cu fc=90.
+
+regula[9]
+daca:
+    -> durere_incheieturi=da
+    -> durere_oase=da
+atunci:
+   dureri_articulatii=da cu fc=90.
+
+regula[10]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=diabet
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+atunci:
+    tipuri_mancare=supa_de_legume cu fc=80.
+
+regula[11]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=diabet
+ atunci:
+    tipuri_mancare=ceai cu fc=81. 
+
+regula[12]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=diabet
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=musaca cu fc=80.
+
+regula[13]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=diabet
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_pui cu fc=81.
+
+regula[14]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=diabet
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=branza cu fc=82.
+
+regula[15]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=diabet
+atunci:
+    tipuri_mancare=mamaliga cu fc=83.
+
+regula[16]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=diabet
+    -> alergie_la_fructe_de_mare=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=peste cu fc=84.
+
+regula[17]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=diabet
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=budinca_cu_mere cu fc=80.
+
+regula[18]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=diabet
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=ciorba_de_vita cu fc=81.
+
+regula[19]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=diabet
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_curcan cu fc=82.
+
+regula[20]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=diabet
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_vita cu fc=83.
+
+regula[21]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=de_ficat
+    -> alergie_la_grau=nu
+atunci:
+    tipuri_mancare=paine_prajita cu fc=80.
+
+regula[22]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=de_ficat
+atunci:
+    tipuri_mancare=ceai cu fc=81.
+
+regula[23]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=de_ficat
+    -> alergie_la_nuci=nu
+atunci:
+    tipuri_mancare=salata_de_fructe cu fc=82.
+
+regula[24]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=de_ficat
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+atunci:
+    tipuri_mancare=supa_de_legume cu fc=83.
+
+regula[25]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=de_ficat
+atunci:
+    tipuri_mancare=miere cu fc=80.
+
+regula[26]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=de_ficat
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=musaca cu fc=81.
+
+regula[27]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=de_ficat
+atunci:
+    tipuri_mancare=mamaliga cu fc=82.
+
+regula[28]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=de_ficat
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=branza cu fc=83.
+
+regula[29]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=de_ficat
+atunci:
+    tipuri_mancare=suc_de_fructe cu fc=84.
+
+regula[30]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=de_ficat
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_pui cu fc=85.
+
+regula[31]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=de_ficat
+    -> alergie_la_fructe_de_mare=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=peste cu fc=86.
+
+regula[32]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=de_ficat
+    -> alergie_la_oua=nu
+    -> alergie_la_arahide=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=inghetata cu fc=80.
+
+regula[33]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=de_ficat
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=budinca_cu_mere cu fc=81.
+
+regula[34]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=de_ficat
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=ciorba_de_vita cu fc=82.
+
+regula[35]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=de_ficat
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=piure_de_cartofi cu fc=83.
+
+regula[36]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=de_ficat
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_curcan cu fc=84.
+
+regula[37]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=de_ficat
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_vita cu fc=85.
+
+regula[38]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=pancreatice
+    -> alergie_la_grau=nu
+atunci:
+    tipuri_mancare=paine_prajita cu fc=80.
+
+regula[39]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=pancreatice
+atunci:
+    tipuri_mancare=ceai cu fc=81.
+
+regula[40]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+atunci:
+    tipuri_mancare=supa_de_legume cu fc=82.
+
+regula[41]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=musaca cu fc=80.
+
+regula[42]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_arahide=nu
+    -> alergie_la_nuci=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=cereale_cu_lapte cu fc=81.
+
+regula[43]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=pancreatice
+atunci:
+    tipuri_mancare=miere cu fc=82.
+
+regula[44]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=pancreatice
+atunci:
+    tipuri_mancare=suc_de_fructe cu fc=83.
+
+regula[45]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=pancreatice
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=branza cu fc=84.
+
+regula[46]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=pancreatice
+    -> alergie_la_fructe_de_mare=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=peste fc=85.
+
+regula[47]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=pancreatice
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_pui cu fc=86.
+
+regula[48]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_arahide=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=inghetata cu fc=80.
+
+regula[49]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=budinca_cu_mere cu fc=81.
+
+regula[50]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=prajitura cu fc=82.
+
+regula[51]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=ciorba_de_vita cu fc=83.
+
+regula[52]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=paste_cu_sos cu fc=84.
+
+regula[53]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=pancreatice
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=piure_de_cartofi cu fc=85.
+
+regula[54]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=pancreatice
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_curcan cu fc=85.
+
+regula[55]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=pancreatice
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_vita cu fc=86.
+
+regula[56]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=guta
+    -> alergie_la_grau=nu
+atunci:
+    tipuri_mancare=paine_prajita cu fc=80.
+
+regula[57]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=guta
+atunci:
+    tipuri_mancare=ceai cu fc=81.
+
+regula[58]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=guta
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+atunci:
+    tipuri_mancare=supa_de_legume cu fc=82.
+
+regula[59]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=guta
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=branza cu fc=80.
+
+regula[60]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=guta
+atunci:
+    tipuri_mancare=suc_de_fructe cu fc=81.
+
+regula[61]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=guta
+atunci:
+    tipuri_mancare=miere cu fc=82.
+
+regula[62]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=guta
+    -> alergie_la_fructe_de_mare=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=peste cu fc=83.
+
+regula[63]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=guta
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=budinca_cu_mere cu fc=80.
+
+regula[64]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_grau=nu
+atunci:
+    tipuri_mancare=paine_prajita cu fc=80.
+
+regula[65]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_nuci=nu
+atunci:
+    tipuri_mancare=salata_de_fructe cu fc=81.
+
+regula[66]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=afectiuni_cardiovasculare
+atunci:
+    tipuri_mancare=ceai cu fc=82.
+
+regula[67]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+atunci:
+    tipuri_mancare=supa_de_legume cu fc=83.
+
+regula[68]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=musaca cu fc=80.
+
+regula[69]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_oua=nu
+    -> alergie_la_arahide=nu
+    -> alergie_la_nuci=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=cereale_cu_lapte cu fc=81.
+
+regula[70]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=afectiuni_cardiovasculare
+atunci:
+    tipuri_mancare=mamaliga cu fc=82.
+
+regula[71]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=afectiuni_cardiovasculare
+atunci:
+    tipuri_mancare=suc_de_fructe cu fc=83.
+
+regula[72]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=branza cu fc=84.
+
+regula[73]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=afectiuni_cardiovasculare
+atunci:
+    tipuri_mancare=miere cu fc=85.
+
+regula[74]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=afectiuni_cardiovasculare
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_pui cu fc=86.
+
+regula[75]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_fructe_de_mare=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=peste cu fc=87.
+
+regula[76]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_oua=nu
+    -> alergie_la_arahide=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=inghetata cu fc=80.
+
+regula[77]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=budinca_cu_mere cu fc=81.
+
+regula[78]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=paste_cu_sos cu fc=82.
+
+regula[79]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=afectiuni_cardiovasculare
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=ciorba_de_vita cu fc=83.
+
+regula[80]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=afectiuni_cardiovasculare
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_curcan cu fc=84.
+
+regula[81]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=ulcer
+    -> alergie_la_grau=nu
+atunci:
+    tipuri_mancare=paine_prajita cu fc=80.
+
+regula[82]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=ulcer
+atunci:
+    tipuri_mancare=ceai cu fc=81.
+
+regula[83]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=ulcer
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+atunci:
+    tipuri_mancare=supa_de_legume cu fc=82.
+
+regula[84]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=ulcer
+    -> alergie_la_oua=nu
+    -> alergie_la_arahide=nu
+    -> alergie_la_nuci=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=cereale_cu_lapte cu fc=80.
+
+regula[85]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=ulcer
+atunci:
+    tipuri_mancare=suc_de_fructe cu fc=81.
+
+regula[86]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=ulcer
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=branza cu fc=82.
+
+regula[87]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=ulcer
+atunci:
+    tipuri_mancare=miere cu fc=83.
+
+regula[88]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=ulcer
+-> alergie_la_fructe_de_mare=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=peste cu fc=84.
+
+regula[89]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=ulcer
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_pui cu fc=85.
+
+regula[90]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=ulcer
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_pui cu fc=85.
+
+regula[91]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=ulcer
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=piure_de_cartofi cu fc=80.
+
+regula[92]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=ulcer
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=prajitura cu fc=81.
+
+regula[93]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=ulcer
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_curcan cu fc=82.
+
+regula[94]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=ulcer
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=ciorba_de_vita cu fc=83.
+
+regula[95]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=hepatite_cronice
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+atunci:
+    tipuri_mancare=supa_de_legume cu fc=80.
+
+regula[96]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=hepatite_cronice
+    -> alergie_la_nuci=nu
+atunci:
+    tipuri_mancare=salata_de_fructe fc=81.
+
+regula[97]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=hepatite_cronice
+    -> alergie_la_nuci=nu
+atunci:
+    tipuri_mancare=ceai cu fc=82.
+
+regula[98]
+daca: 
+    -> valoare_calorica=val_calorica_mica
+    -> boli=hepatite_cronice
+    -> alergie_la_grau=nu
+atunci:
+    tipuri_mancare=paine_prajita cu fc=83.
+
+regula[99]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=hepatite_cronice
+atunci:
+    tipuri_mancare=mamaliga cu fc=80.
+
+regula[100]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=hepatite_cronice
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=musaca cu fc=81.
+
+regula[101]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=hepatite_cronice
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=branza cu fc=82.
+
+regula[102]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=hepatite_cronice
+    -> alergie_la_fructe_de_mare=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=peste cu fc=83.
+
+regula[103]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=hepatite_cronice
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_pui cu fc=84.
+
+regula[104]
+daca: 
+    -> valoare_calorica=val_calorica_medie
+    -> boli=hepatite_cronice
+atunci:
+    tipuri_mancare=miere cu fc=85.
+
+regula[105]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=hepatite_cronice
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_lapte=nu
+atunci:
+    tipuri_mancare=budinca_cu_mere cu fc=80.
+
+regula[106]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=hepatite_cronice
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=ciorba_de_vita cu fc=81.
+
+regula[107]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=hepatite_cronice
+    -> alergie_la_oua=nu
+    -> alergie_la_grau=nu
+    -> alergie_la_soia=nu
+atunci:
+    tipuri_mancare=paste_cu_sos cu fc=82.
+
+regula[108]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=hepatite_cronice
+    -> alergie_la_oua=nu
+    -> alergie_la_lapte=nu
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=piure_de_cartofi cu fc=83.
+
+regula[109]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=hepatite_cronice
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_curcan cu fc=84.
+
+regula[110]
+daca: 
+    -> valoare_calorica=val_calorica_mare
+    -> boli=hepatite_cronice
+    -> vegetarieni=nu
+atunci:
+    tipuri_mancare=friptura_de_vita cu fc=85.
+
+regula[111]
+daca: 
+    ->coma=da
+atunci:
+    tipuri_mancare=perfuzii cu fc=100.
+
+intrebare[greata]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul greata?'.
+
+intrebare[varsaturi]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul varsaturi?'.
+
+intrebare[oboseala]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul oboseala?'.
+
+intrebare[tuse]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul tuse?'.
+
+intrebare[durere_oase]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul dureri de oase?'.
+
+intrebare[durere_incheieturi]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul dureri la incheieturi?'.
+
+intrebare[tulburari_digestive]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul tulburari_digestive?'.
+
+intrebare[balonari]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul balonari?'.
+
+intrebare[dureri_in_piept]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul dureri in piept?'.
+
+intrebare[indigestie]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul indigestie?'.
+
+intrebare[icter]
+optiuni: 
+    ->da
+    ->nu
+text:'Are pacientul icter?'.
+
+intrebare[temperatura]
+optiuni: 
+    ->temperatura_mica
+    ->temperatura_medie
+    ->temperatura_mare
+text:'Ce temperatura are pacientul?'.
+
+intrebare[alergie_la_oua]
+optiuni:
+    ->da
+    ->nu
+text:'Are pacientul alergie la oua?'.
+
+intrebare[alergie_la_lapte]
+optiuni:
+    ->da
+    ->nu
+text:'Are pacientul alergie la lapte?'.
+
+intrebare[alergie_la_arahide]
+optiuni:
+    ->da
+    ->nu
+text:'Are pacientul alergie la arahide?'.
+
+intrebare[alergie_la_grau]
+optiuni:
+    ->da
+    ->nu
+text:'Are pacientul alergie la grau?'.
+
+intrebare[alergie_la_soia]
+optiuni:
+    ->da
+    ->nu
+text:'Are pacientul alergie la soia?'.
+
+intrebare[alergie_la_nuci]
+optiuni:
+    ->da
+    ->nu
+text:'Are pacientul alergie la nuci?'.
+
+intrebare[alergie_la_fructe_de_mare]
+optiuni:
+    ->da
+    ->nu
+text:'Are pacientul alergie la fructe_de_mare?'.
+
+intrebare[valoare_calorica]
+optiuni: 
+    ->val_calorica_mica
+    ->val_calorica_medie
+    ->val_calorica_mare
+text:'Ce valoare calorica sa aiba mancarea?'.
+
+intrebare[vegetarieni]
+optiuni: 
+    ->da
+    ->nu
+text:'Este pacientul vegetarian?'.
+
+intrebare[coma]
+optiuni: 
+    ->da
+    ->nu
+text:'Este pacientul in coma?'.
