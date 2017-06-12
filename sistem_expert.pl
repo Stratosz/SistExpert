@@ -150,12 +150,20 @@ executa([_|_]) :-
 write('Comanda incorecta! '),nl.
 
 scopuri_princ :-  %determina scopul principal
-scop(Atr),determina(Atr), afiseaza_scop(Atr),fail.
+scop(Atr),determina(Atr), afiseaza_scop(Atr), detalii_scop(Atr), fail.
 scopuri_princ.
 
 determina(Atr) :-
 realizare_scop(av(Atr,_),_,[scop(Atr)]),!.
 determina(_).
+
+%detalii_scop(+Atr) - primeste un atribut si afiseaza detaliile pentru solutiile existente
+detalii_scop(Atr):-
+creaza_lista_fapte(Atr, L),
+sort_lista_fapte(L, L1),
+ordonare_param_fapte(L1, Lrez),
+scrie_scop_lista_detalii(Lrez).
+
 
 %afiseaza scop original:
 %afiseaza_scop(Atr) :-
@@ -172,7 +180,7 @@ ordonare_param_fapte(L,Lrez),
 scrie_scop_lista(Lrez),
 nl,fail.
 afiseaza_scop(Atr) :-
-nl,\+ fapt(av(Atr,Val),_,_),
+nl,\+ fapt(av(Atr,_),_,_),
 write('Nu exista solutii pentru raspunsurile date!'),nl,fail.
 afiseaza_scop(_):-nl,nl.
 
@@ -186,6 +194,10 @@ ordonare_param_fapte(L,Lrez):-sort_lista_fapte(L,L1),bagof(fapt(av(Atr,Val),FC,H
 scrie_scop_lista([H|T]):-
 scrie_scop_lista(T), scrie_scop(H).
 scrie_scop_lista([]).
+%scrie_scop_lista_detalii(+L) - acelasi lucru ca si scrie_scop_lista, folosit insa pentru a scrie detaliile pentru fiecare solutie
+scrie_scop_lista_detalii([H|T]):-
+scrie_scop_lista_detalii(T), scrie_scop_detalii(H).
+scrie_scop_lista_detalii([]).
 
 %am modificat scrie scop pentru primi un predicat de tip fapt;
 %am adaugat verificarea FC >= 60 in scriere, deoarece am modificat 
@@ -197,6 +209,13 @@ scrie_lista(X),tab(2),
 write(' '),
 write('factorul de certitudine este '),
 FC1 is integer(FC),write(FC1), nl.
+
+%folosit pentru afisarea formatata a solutiilor cu detalii
+scrie_scop_detalii(fapt(av(Atr,_),_,_)) :-
+descriere(Atr, Desc, Img, LIngred),
+nl,write(Atr),nl,
+write('>>>descriere:'), write(Desc), nl,
+write('>>>ingrediente:'), write(LIngred), nl, nl .
 
 %scrie_scop original:
 %scrie_scop(av(Atr,Val),FC) :-
