@@ -376,15 +376,20 @@ cum(Scop),
 cum_premise(X).
         
 interogheaza(Atr,Mesaj,[da,nu],Istorie) :- %interogheaza utilizatorul
-!,write(Mesaj),nl,write('(da,nu,nu_stiu,nu_conteaza)'),nl,
+!,write('Atributul '),write(Atr),write(' cerut de regula '),ia_prima_regula_din_hist(Istorie,Id),
+write(Id),nl,write(Mesaj),nl,write('(da,nu,nu_stiu,nu_conteaza)'),nl,
 de_la_utiliz(X,Istorie,[da,nu,nu_stiu,nu_conteaza]), 
 det_val_fc(X,Val,FC), %determina atributul cu valoarea si FC pentru raspuns
 asserta( fapt(av(Atr,Val),FC,[utiliz]) ). %salveaza la inceput faptul cu atributul si valoarea, FC-ul si istoricul ca fiind de la utilizator
 interogheaza(Atr,Mesaj,Optiuni,Istorie) :-
-write(Mesaj),nl,
+write('Atributul '),write(Atr),write(' cerut de regula '),ia_prima_regula_din_hist(Istorie,Id),
+write(Id),nl,write(Mesaj),nl,
 append(Optiuni, [nu_stiu, nu_conteaza], Optiuni1),
 citeste_opt(VLista,Optiuni1,Istorie),
 assert_fapt(Atr,VLista).
+
+ia_prima_regula_din_hist([H|T], IdRegula):-
+IdRegula is round(H).
 
 
 citeste_opt(X,Optiuni,Istorie) :- %citeste optiunea de la utilizator
