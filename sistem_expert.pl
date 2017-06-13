@@ -377,19 +377,19 @@ cum_premise(X).
         
 interogheaza(Atr,Mesaj,[da,nu],Istorie) :- %interogheaza utilizatorul
 !,write('Atributul '),write(Atr),write(' cerut de regula '),ia_prima_regula_din_hist(Istorie,Id),
-write(Id),nl,write(Mesaj),nl,write('(da,nu,nu_stiu,nu_conteaza)'),nl,
-de_la_utiliz(X,Istorie,[da,nu,nu_stiu,nu_conteaza]), 
+IdInt is round(Id),write(IdInt),nl,write(Mesaj),nl,write('( da nu nu_stiu nu_conteaza afis_regula )'),nl,
+de_la_utiliz(X,Istorie,[da,nu,nu_stiu,nu_conteaza,afis_regula]), 
 det_val_fc(X,Val,FC), %determina atributul cu valoarea si FC pentru raspuns
 asserta( fapt(av(Atr,Val),FC,[utiliz]) ). %salveaza la inceput faptul cu atributul si valoarea, FC-ul si istoricul ca fiind de la utilizator
 interogheaza(Atr,Mesaj,Optiuni,Istorie) :-
 write('Atributul '),write(Atr),write(' cerut de regula '),ia_prima_regula_din_hist(Istorie,Id),
-write(Id),nl,write(Mesaj),nl,
-append(Optiuni, [nu_stiu, nu_conteaza], Optiuni1),
+IdInt is round(Id),write(IdInt),nl,write(Mesaj),nl,
+append(Optiuni, [nu_stiu, nu_conteaza, afis_regula], Optiuni1),
 citeste_opt(VLista,Optiuni1,Istorie),
 assert_fapt(Atr,VLista).
 
 ia_prima_regula_din_hist([H|T], IdRegula):-
-IdRegula is round(H).
+IdRegula is H.
 
 
 citeste_opt(X,Optiuni,Istorie) :- %citeste optiunea de la utilizator
@@ -401,6 +401,9 @@ de_la_utiliz(X,Istorie,Optiuni). %ia de la utilizator
 de_la_utiliz(X,Istorie,Lista_opt) :-
 repeat,write(': '),citeste_linie(X),
 proceseaza_raspuns(X,Istorie,Lista_opt).
+
+proceseaza_raspuns([afis_regula],Istorie,_):-
+nl,ia_prima_regula_din_hist(Istorie,Id),afis_regula(Id),!,fail.
 
 proceseaza_raspuns([de_ce],Istorie,_) :-    
 nl,afis_istorie(Istorie),!,fail.
