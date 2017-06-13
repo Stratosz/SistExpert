@@ -141,7 +141,7 @@ creaza_folder :-
 directory_exists('output_mancare') ->
 %am adaugat 0.1 secunde de sleep, deoarece uneori primeam eroare la crearea fisierului
 %(probabil nu trecea suficient timp de la stergere pana la creare?)
-sterge_fisier_si_director, sleep(0.1), make_directory(output_mancare);
+sterge_fisiere2, sterge_fisier_si_director, sleep(0.1), make_directory(output_mancare);
 sleep(0.1), make_directory(output_mancare).
 
 %verifica daca exista fisierul si il sterge, apoi apeleaza sterge_director
@@ -151,6 +151,11 @@ current_directory(_, output_mancare),
 file_exists('log_atrib_sol.txt') ->
 delete_file('log_atrib_sol.txt'), sterge_director;
 sterge_director.
+
+sterge_fisiere2:-
+file_member_of_directory('output_mancare', 'demonstratie*', _, FilePath),
+delete_file(FilePath), sterge_fisiere2.
+sterge_fisiere2.
 
 %revine in folderul radacina al proiectului si sterge directorul output_mancare
 sterge_director :-
@@ -169,9 +174,45 @@ retractall(fapt(_,_,_)),!.
 executa([afisare_fapte]) :-
 afiseaza_fapte,!.
 executa([cum|L]) :- cum(L),!.
-executa([iesire]):-!.
+executa([iesire]):- cum_fisier, !.
 executa([_|_]) :-
 write('Comanda incorecta! '),nl.
+
+%folosit pentru crearea demonstratiilor din fisier
+cum_fisier:-
+scop(Atr), determina(Atr),
+creaza_lista_fapte(Atr, L),
+creaza_fisier_lista(L).
+
+creaza_fisier_lista([H|T]):-
+creaza_fisier_lista(T), creaza_fisier_solutii(H).
+creaza_fisier_lista([]).
+
+%pentru fiecare Val existenta in baza de cunostinte pentru Atr
+%creaza un fisier de forma "demonstratie_timestamp_(Val,FC).txt"
+%in folderul "output_mancare/"
+creaza_fisier_solutii(fapt(av(Atr,Val),FC,_)):-
+now(Timestamp), number_codes(Timestamp,CodTime),
+atom_codes(T,"output_mancare/demonstratie_"),
+atom_codes(T2,"_("),
+atom_codes(Val, T3),
+atom_codes(T4,","),
+number_codes(FC,T5),
+atom_codes(T6,").txt"),
+atom_codes(T, TR),
+atom_codes(T2, TR2),
+atom_codes(T4, TR4),
+atom_codes(T6, TR6),
+append(TR,CodTime,X),
+append(X,TR2,X2),
+append(X2,T3,X3),
+append(X3,TR4,X4),
+append(X4,T5,X5),
+append(X5,TR6,X6),
+name(Rez, X6),
+open(Rez, write, Stream),
+write(Stream,'asdadsa'),
+close(Stream).
 
 scopuri_princ :-  %determina scopul principal
 scop(Atr),determina(Atr),
