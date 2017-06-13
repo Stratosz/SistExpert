@@ -139,8 +139,10 @@ executa([H|T]), H == iesire.
 %si recreaza-l; altfel, pur si simplu creeaza directorul output_mancare
 creaza_folder :-
 directory_exists('output_mancare') ->
-sterge_fisier_si_director, make_directory(output_mancare);
-make_directory(output_mancare).
+%am adaugat 0.1 secunde de sleep, deoarece uneori primeam eroare la crearea fisierului
+%(probabil nu trecea suficient timp de la stergere pana la creare?)
+sterge_fisier_si_director, sleep(0.1), make_directory(output_mancare);
+sleep(0.1), make_directory(output_mancare).
 
 %verifica daca exista fisierul si il sterge, apoi apeleaza sterge_director
 sterge_fisier_si_director :- 
@@ -173,10 +175,18 @@ write('Comanda incorecta! '),nl.
 
 scopuri_princ :-  %determina scopul principal
 scop(Atr),determina(Atr),
-afiseaza_scop(Atr), afiseaza_detalii(Atr),
-%access_file(log_atrib_sol.txt, append),
+afiseaza_scop(Atr), afiseaza_detalii(Atr), scrie_fis_log(Atr),  
 fail.
 scopuri_princ.
+
+scrie_fis_log(Atr):-
+fapt(av(Atr,Val),_,_),
+open('output_mancare/log_atrib_sol.txt', append, Stream),
+write(Stream,'Solutia: '), write(Stream, Atr), write(Stream, '='), write(Stream, Val), nl(Stream),
+write(Stream,'Atribute incluse in arbore:'), nl(Stream),
+write(Stream,'Atribute neincluse in arbore:'), nl(Stream),
+write(Stream,'----------------------------------------------'), nl(Stream), nl(Stream),
+close(Stream).
 
 determina(Atr) :-
 realizare_scop(av(Atr,_),_,[scop(Atr)]),!.
@@ -191,19 +201,18 @@ nl,nl,write('|: '),citeste_linie([H|T]),
 
 %proceseaza raspunsul pentru intrebarea legata  de detalii
 proces_rasp(Atr, da):-
-detalii_scop(Atr), fail.
-proces_rasp(Atr, nu):-
-fail.
+detalii_scop(Atr).
+proces_rasp(Atr, nu).
 
 %detalii_scop(+Atr) - primeste un atribut si afiseaza detaliile pentru solutiile existente
 detalii_scop(Atr):-
 creaza_lista_fapte(Atr, L),
 ordonare_param_fapte(L, Lrez),
 scrie_scop_lista_detalii(Lrez),
-nl,fail.
+nl.
 detalii_scop(Atr) :-
 nl,\+ fapt(av(Atr,_),_,_),
-write('Nu exista solutii pentru raspunsurile date!'),nl,fail.
+write('Nu exista solutii pentru raspunsurile date!'),nl.
 detalii_scop(_):-nl,nl.
 
 
